@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+- Node.js / `npx` support via `tsx` (no TypeScript compile step): `npx antigravity-acp` / `npx agy-acp`.
+- `better-sqlite3` and Node `child_process`/stream helpers so the server is not Bun-only at runtime.
+
+### Changed
+- Package `bin` entries point at `bin/agy-acp.mjs`, which registers tsx and loads `index.ts`.
+- `postinstall` and `start` scripts use `tsx` (Bun still available via `start:bun` and compile targets).
+
 ## [1.1.0] - 2026-07-30
 
 ### Added
